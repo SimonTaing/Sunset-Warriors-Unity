@@ -12,3 +12,13 @@ Packages/
 UserSettings/
 
 .vsconfig
+
+Sunset-Warriors-Unity.sln
+
+.vs/Sunset-Warriors-Unity/v16/
+
+Assembly-CSharp.csproj
+
+obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

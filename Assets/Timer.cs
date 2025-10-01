@@ -7,8 +7,10 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] public bool timerOver = false;
     [SerializeField] private float timerValue = 0f;
+    [SerializeField] private int reactionTime = 0;
     [SerializeField] private GameObject timerText;
     [SerializeField] private Text uiText;
+    [SerializeField] private GameObject prompt;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class Timer : MonoBehaviour
         if (timerValue <= 0)
         {
             timerOver = true;
+            prompt.GetComponent<Image>().enabled = true;
+            reactionTime++;
         }
         else
         {
@@ -35,5 +39,7 @@ public class Timer : MonoBehaviour
     public void SetTimer()
     {
         timerValue = Random.Range(3, 10);
+        reactionTime = 0;
+        prompt.GetComponent<Image>().enabled = false;
     }
 }

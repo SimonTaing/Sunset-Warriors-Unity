@@ -28,6 +28,11 @@ public class Controller : MonoBehaviour
         else if (Input.GetKeyDown("right"))
         {
             P2Input();
+        } 
+        else if (Input.GetKeyDown("space")) 
+        {
+            timer.SetTimer();
+            timer.enabled = true;
         }
     }
 
@@ -45,7 +50,7 @@ public class Controller : MonoBehaviour
             p2Score++;
             Debug.Log("P2 wins");
         }
-        timer.SetTimer();
+        timer.enabled = false;
     }
 
     void P2Input()
@@ -61,6 +66,6 @@ public class Controller : MonoBehaviour
             p1Score++;
             Debug.Log("P1 wins");
         }
-        timer.SetTimer();
+        timer.enabled = false;
     }
 }
